@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: template
+  datasource:
+    url: jdbc:tc:postgresql:15-alpine:///databasename
+    username: root
+    password: root
+    driver-class-name: org.testcontainers.jdbc.ContainerDatabaseDriver
+    hikari:
+      schema: myschema
+  flyway:
+    enabled: true
+    create-schemas: true
+    default-schema: myschema
+    placeholders:
+      schema_name: myschema
